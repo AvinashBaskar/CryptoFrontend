@@ -12,9 +12,8 @@ const App = () => {
 
     useEffect(async () => {
         const response = await axios.get(
-     "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
-            
-            );
+     "https://localhost:7202/api/crypto/GetAllCrypto"
+               );
 
         setCoinsData(response.data);
     }, []);
@@ -25,7 +24,8 @@ const App = () => {
 
     return (
         <div className='app'>
-            <h1>Crypto Gallery</h1>
+            <h1>Your Own Api</h1>
+            {/* <h1>Cryptogallery</h1> */}
             <CryptoList coinsData={currentPosts} />
             <Pagination
                 totalPosts={coinsData.length}
