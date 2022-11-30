@@ -10,9 +10,10 @@ const CryptoList = ({ coinsData }) => {
                 return (
                     <CryptoCard
                         key={index}
-                        image={coin.image}
-                        name={coin.name}
-                        price={coin.current_price}
+                        image={coin.cryptoImage}
+                        name={coin.cryptoName}
+                        price={coin.cryptoPrice}
+                        symbol={coin.cryptoSymbol}
                     />
                 );
             })}
